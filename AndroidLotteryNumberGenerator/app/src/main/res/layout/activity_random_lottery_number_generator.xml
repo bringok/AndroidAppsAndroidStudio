@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".RandomLotteryNumberGenerator">
+
+    <EditText
+        android:id="@+id/minNumText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="textPersonName"
+        android:text="Minimum:"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <EditText
+        android:id="@+id/maxNumText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/minNumText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="textPersonName"
+        android:text="Maximum:"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="53dp" />
+
+    <EditText
+        android:id="@+id/numGroupsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/maxNumText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="textPersonName"
+        android:text="How Many #'s In A Group:"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <EditText
+        android:id="@+id/howManyInGroupsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numGroupsText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="textPersonName"
+        android:text="Number of Groups:"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <EditText
+        android:id="@+id/minNumVal"
+        android:layout_width="157dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@+id/minNumText"
+        android:background="@drawable/rect_text_edit"
+        android:ems="10"
+        android:inputType="number"
+        android:text="1"
+        android:textAlignment="viewEnd" />
+
+    <EditText
+        android:id="@+id/maxNumVal"
+        android:layout_width="157dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="56dp"
+        android:layout_toRightOf="@+id/maxNumText"
+        android:background="@drawable/rect_text_edit"
+        android:ems="10"
+        android:inputType="number"
+        android:text="10"
+        android:textAlignment="viewEnd" />
+
+    <EditText
+        android:id="@+id/numGroupsVal"
+        android:layout_width="157dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="115dp"
+        android:layout_toRightOf="@+id/numGroupsText"
+        android:background="@drawable/rect_text_edit"
+        android:ems="10"
+        android:inputType="number"
+        android:text="5"
+        android:textAlignment="viewEnd" />
+
+    <EditText
+        android:id="@+id/howManyGroupsVal"
+        android:layout_width="157dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="170dp"
+        android:layout_toRightOf="@+id/howManyInGroupsText"
+        android:background="@drawable/rect_text_edit"
+        android:ems="10"
+        android:inputType="number"
+        android:text="4"
+        android:textAlignment="viewEnd" />
+
+    <CheckBox
+        android:id="@+id/chkBoxRepeatsAllowed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/howManyInGroupsText"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="19dp"
+        android:checked="true"
+        android:text=""
+        android:buttonTint="#FFFFFF"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/repeatsAllowedTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/howManyGroupsVal"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="textPersonName"
+        android:text="Repeats Allowed?"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <Button
+        android:id="@+id/btnGetLuckyNumbers"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/repeatsAllowedTxt"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickGetMyLuckyNumbers"
+        android:layout_marginBottom="171dp"
+        android:text="Get My Lucky Numbers" />
+
+    <EditText
+        android:id="@+id/txtLuckyNumbers"
+        android:layout_width="371dp"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/btnGetLuckyNumbers"
+        android:layout_alignStart="@+id/chkBoxRepeatsAllowed"
+        android:layout_marginTop="-171dp"
+        android:textColor="#FFFFFF"
+        android:ems="10"
+        android:focusable="false"
+        android:gravity="top|center_horizontal"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:text="" />
+
+</RelativeLayout>
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".WiFiScannerActivity">
+
+    <TextView
+        android:id="@+id/txtWiFiScanner"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:text="Wi-Fi Scanner"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="28dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="3dp" />
+
+    <Button
+        android:id="@+id/btnStartScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_start_scan"
+        android:layout_below="@+id/txtWiFiScanner"
+        android:onClick="onStartScanClicked"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+    <TextView
+        android:id="@+id/txtScanResultsLabel"
+        android:layout_below="@+id/btnStartScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_scan_results"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="101dp" />
+
+    <EditText
+        android:id="@+id/txtResults"
+        android:layout_width="382dp"
+        android:layout_height="399dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="106dp"
+        android:focusable="false"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:text=""
+        android:layout_below="@+id/txtScanResultsLabel"
+        android:textAlignment="gravity"
+        android:textColor="#FFFFFF" />
+
+
+    <!--
+        android:gravity="top"
+            android:layout_below="@+id/btnStartScan"
+
+-->
+
+</RelativeLayout>

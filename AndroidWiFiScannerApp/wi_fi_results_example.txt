@@ -1,0 +1,6 @@
+Scan Results:
+BSSID: 68:7f:74:cb:e2:38
+SSID: yourareadildo
+Frequency: 2412
+Level: 40
+Capabilities: [WPA2-PSK-CCMP][WPS]

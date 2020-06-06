@@ -1,0 +1,4 @@
+<resources>
+    <!-- string name="app_name">BasicAndroidRandomNumberGenerator</string -->
+    <string name="app_name">Random Number Generator</string>
+</resources>
